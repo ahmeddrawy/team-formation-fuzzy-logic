@@ -25,7 +25,7 @@ public class Line {
         return slope;
     }
     public boolean inRange(double x ){
-        return  first.getX()<= x && second.getX()<=x;
+        return  first.getX()<= x && second.getX()>=x;
     }
 
 }
