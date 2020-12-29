@@ -18,7 +18,7 @@ enum Fuzzy {
         EXPERT
     }
     enum Risk{
-        LOW,MEDIUM,HIGH
+        LOW,NORMAL,HIGH
     }
 };
 public class FuzzyArray {
