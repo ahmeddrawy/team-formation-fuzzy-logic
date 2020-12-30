@@ -19,7 +19,7 @@ public class Main {
         System.out.println( "Expert "+ret2.get(Fuzzy.Expertise.EXPERT));
         FuzzyArray Risk = intiator.getRisk();
         double risklow = Math.max((ret.get(Fuzzy.Funding.HIGH)) ,ret2.get(Fuzzy.Expertise.EXPERT));
-        double riskNormal =Math.max( Math.min(ret.get(Fuzzy.Funding.MEDIUM),ret2.get(Fuzzy.Expertise.INTERMEDIATE)) ,ret2.get(Fuzzy.Expertise.BEGINNER) );
+        double riskNormal =Math.min(ret.get(Fuzzy.Funding.MEDIUM), Math.max(ret2.get(Fuzzy.Expertise.INTERMEDIATE),ret2.get(Fuzzy.Expertise.BEGINNER)) );
         double riskHigh = Math.max(ret.get(Fuzzy.Funding.VERY_LOW), Math.min(ret.get(Fuzzy.Funding.LOW),ret2.get(Fuzzy.Expertise.BEGINNER)));
         System.out.println("rish low "+ risklow);
         System.out.println("rish Normal "+ riskNormal);
