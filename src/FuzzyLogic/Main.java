@@ -27,6 +27,10 @@ public class Main {
         double ans = (risklow *Risk.get(Fuzzy.Risk.LOW).getCentroid() + riskNormal*Risk.get(Fuzzy.Risk.NORMAL).getCentroid() + riskHigh *Risk.get(Fuzzy.Risk.HIGH).getCentroid())/
                 (risklow + riskNormal + riskHigh);
         System.out.println("answer "+ ans);
+        HashMap<Enum<?> , Double> riskCal = Risk.calculate(ans);
+        System.out.println("membership in low "+riskCal.get(Fuzzy.Risk.LOW));
+        System.out.println("membership in normal "+riskCal.get(Fuzzy.Risk.NORMAL));
+        System.out.println("membership in high "+riskCal.get(Fuzzy.Risk.HIGH));
 
         // write your code here
     }
